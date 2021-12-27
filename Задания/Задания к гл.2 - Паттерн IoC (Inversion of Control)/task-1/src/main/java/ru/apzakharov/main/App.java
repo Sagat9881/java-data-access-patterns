@@ -15,6 +15,7 @@ public class App
     {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("newSpringXMLConfig.xml");
-
+        NewYearGift h = (NewYearGift)context.getBean("gift1");
+        h.print();
     }
 }
