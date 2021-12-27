@@ -2,10 +2,37 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-4.0.xsd ">
-
-    <bean name="hello" class= "ru.apzakharov.main.HelloImpl">
-        <constructor-arg value = "hi!"/>
-        <property name="s" value = "hi111"/>
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+">
+    <bean id="Car" class="sweets.Car">
+        <constructor-arg value = "50"/>
+        <constructor-arg value = " Car Volga"/>
+        <constructor-arg value = "150.50"/>
+        <property name ="price" value = "150.5"/>
+    </bean>
+    <bean id="TeddyBear" class="sweets.TeddyBear">
+        <constructor-arg value = "100"/>
+        <constructor-arg value = "gray"/>
+        <constructor-arg value = "250.50"/>
+        <property name ="price" value = "250.5"/>
+    </bean>
+    <bean id="WhiteChocolate" class="sweets.WhiteChocolate">
+        <constructor-arg value = "60"/>
+        <constructor-arg value = "Alenka"/>
+        <constructor-arg value = "90.50"/>
+        <property name ="price" value = "90.5"/>
+    </bean>
+    <bean id="BlackChocolate" class="sweets.BlackChocolate">
+        <constructor-arg value = "80"/>
+        <constructor-arg value = "Russian"/>
+        <constructor-arg value = "70"/>
+    </bean>
+    <bean id="gift1" class="sweets.NewYearGift">
+        <property name ="list" >
+            <list>
+                <ref bean="WhiteChocolate"/>
+                <ref bean="TeddyBear"/>
+            </list>
+        </property>
     </bean>
 </beans>

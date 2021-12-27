@@ -15,7 +15,6 @@ public class App
     {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("newSpringXMLConfig.xml");
-        Hello h = (Hello)context.getBean("hello");
-        h.sayHi();
+
     }
 }
