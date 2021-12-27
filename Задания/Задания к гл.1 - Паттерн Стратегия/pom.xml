@@ -70,7 +70,7 @@
                     <version>${maven.jar.plugin.version}</version>
                     <configuration>
                         <outputDirectory>
-                            ${basedir}/${project.artifactId}/target
+                            ${basedir}/target
                         </outputDirectory>
                     </configuration>
                 </plugin>
