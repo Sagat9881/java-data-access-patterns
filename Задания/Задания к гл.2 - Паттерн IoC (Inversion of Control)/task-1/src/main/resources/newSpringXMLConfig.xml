@@ -5,28 +5,27 @@
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 ">
 
-    <bean id="TeddyBear" class="ru.apzakharov.main.TeddyBear">
-        <constructor-arg value = "100"/>
-        <constructor-arg value = "gray"/>
-        <constructor-arg value = "250.50"/>
-        <property name ="price" value = "250.5"/>
+    <bean id="Austerlitz" class="ru.apzakharov.main.Austerlitz" >
+        <constructor-arg value = "2.12.1805"/>
+        <constructor-arg value = "Napoleon"/>
+        <constructor-arg value = "Czech"/>
     </bean>
-    <bean id="WhiteChocolate" class="ru.apzakharov.main.WhiteChocolate">
-        <constructor-arg value = "60"/>
-        <constructor-arg value = "Alenka"/>
-        <constructor-arg value = "90.50"/>
-        <property name ="price" value = "90.5"/>
+    <bean id="BattleOfTrafalgar" class="ru.apzakharov.main.BattleOfTrafalgar" >
+        <constructor-arg value = "21.10.1805"/>
+        <constructor-arg value = "British"/>
+        <constructor-arg value = "Spain"/>
     </bean>
-    <bean id="BlackChocolate" class="ru.apzakharov.main.BlackChocolate">
-        <constructor-arg value = "80"/>
-        <constructor-arg value = "Russian"/>
-        <constructor-arg value = "70"/>
+    <bean id="BattleOfBorodino" class="ru.apzakharov.main.BattleOfBorodino" >
+        <constructor-arg value = "7.09.1812"/>
+        <constructor-arg value = "Nobody"/>
+        <constructor-arg value = "Russia"/>
     </bean>
-    <bean id="gift1" class="ru.apzakharov.main.NewYearGift">
+    <bean id="NapoleaonsBattel" class="ru.apzakharov.main.NapoleaonsBattel" >
         <property name ="list" >
             <list>
-                <ref bean="WhiteChocolate"/>
-                <ref bean="TeddyBear"/>
+                <ref bean="BattleOfBorodino"/>
+                <ref bean="BattleOfTrafalgar"/>
+                <ref bean="Austerlitz"/>
             </list>
         </property>
     </bean>
